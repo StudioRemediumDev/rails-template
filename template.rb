@@ -20,4 +20,7 @@ CODE
 
 after_bundle do 
   generate 'rspec:install'
+  git :init
+  git add: "."
+  git commit: %Q{ -m 'Initial commit' }
 end
